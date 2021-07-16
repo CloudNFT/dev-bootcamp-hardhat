@@ -50,5 +50,12 @@ module.exports = async ({
   }
   log("----------------------------------------------------")
 
+  //try to fund Price Exercise
+  const PriceExercise = await deployments.get('PriceExercise')
+  const priceExercise = await ethers.getContractAt('PriceExercise', PriceExercise.address)
+ 
+ 
+
+
 }
 module.exports.tags = ['all']
